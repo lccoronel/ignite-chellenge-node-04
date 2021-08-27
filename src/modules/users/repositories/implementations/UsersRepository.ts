@@ -34,7 +34,9 @@ class UsersRepository implements IUsersRepository {
   }
 
   findByEmail(email: string): User | undefined {
-    // Complete aqui
+    const userExists = this.users.find((user) => user.email === email);
+
+    return userExists;
   }
 
   turnAdmin(receivedUser: User): User {
