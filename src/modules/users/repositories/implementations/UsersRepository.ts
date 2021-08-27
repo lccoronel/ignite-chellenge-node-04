@@ -45,6 +45,7 @@ class UsersRepository implements IUsersRepository {
     );
 
     userExists.admin = !receivedUser.admin;
+    userExists.updated_at = new Date();
 
     return userExists;
   }
